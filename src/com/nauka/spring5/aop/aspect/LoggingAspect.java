@@ -27,4 +27,9 @@ public class LoggingAspect {
 	public void beforeStringReturnAdvice() {
 		System.out.println("====> Advice @Before beforeStringReturnAdvice");
 	}
+	
+	@Before("execution(* addClient(com.nauka.spring5.aop.domain.Client))")
+	public void beforeAddClientAdvice() {
+		System.out.println("====> Advice @Before beforeAddClientAdvice");
+	}
 }

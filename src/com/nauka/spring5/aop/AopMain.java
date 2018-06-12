@@ -3,6 +3,7 @@ package com.nauka.spring5.aop;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import com.nauka.spring5.aop.dao.AccountDAO;
 import com.nauka.spring5.aop.dao.MembershipDAO;
+import com.nauka.spring5.aop.domain.Client;
 
 public class AopMain {
 
@@ -16,9 +17,10 @@ public class AopMain {
 		MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 	
 		//wykonanie metod
-		//dodawanie kont
+		//dodawanie
 		accountDAO.addAccount();
 		membershipDAO.addAccount();
+		accountDAO.addClient(new Client());
 		
 		//kasowanie kont
 		System.out.println("\n");
