@@ -32,4 +32,9 @@ public class LoggingAspect {
 	public void beforeAddClientAdvice() {
 		System.out.println("====> Advice @Before beforeAddClientAdvice");
 	}
+	
+	@Before("execution(* com.nauka.spring5.aop.dao.*.*(..))")
+	public void beforeInPackageAdvice() {
+		System.out.println("====> Advice @Before beforeInPackageAdvice");
+	}
 }
