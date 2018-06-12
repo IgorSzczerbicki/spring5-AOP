@@ -18,6 +18,9 @@ public class AopMain {
 		//wykonanie metod
 		accountDAO.addAccount();
 		membershipDAO.addAccount();
+		System.out.println("\n");
+		accountDAO.deleteAccount();
+		membershipDAO.deleteAccount();
 		
 		//zamkniêcie kontextu
 		context.close();

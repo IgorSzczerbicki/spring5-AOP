@@ -8,4 +8,8 @@ public class AccountDAO {
 	public void addAccount() {
 		System.out.println(getClass() + " adding account");
 	}
+	
+	public void deleteAccount() {
+		System.out.println(getClass() + " deleting account");
+	}
 }

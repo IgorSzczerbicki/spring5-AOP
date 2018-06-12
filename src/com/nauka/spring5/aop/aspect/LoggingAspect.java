@@ -12,4 +12,9 @@ public class LoggingAspect {
 	public void beforeAddAccountAdvice() {
 		System.out.println("====> Advice @Before beforeAddAccountAdvice");
 	}
+	
+	@Before("execution(public void com.nauka.spring5.aop.dao.MembershipDAO.deleteAccount())")
+	public void beforeDeleteAccountAdvice() {
+		System.out.println("====> Advice @Before beforeDeleteAccountAdvice");
+	}
 }
