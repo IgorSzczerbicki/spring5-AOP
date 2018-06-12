@@ -17,4 +17,9 @@ public class LoggingAspect {
 	public void beforeDeleteAccountAdvice() {
 		System.out.println("====> Advice @Before beforeDeleteAccountAdvice");
 	}
+	
+	@Before("execution(public void update*())")
+	public void beforeUpdateAdvice() {
+		System.out.println("====> Advice @Before beforeUpdateAdvice");
+	}
 }

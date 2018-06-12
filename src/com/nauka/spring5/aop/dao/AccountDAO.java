@@ -12,4 +12,8 @@ public class AccountDAO {
 	public void deleteAccount() {
 		System.out.println(getClass() + " deleting account");
 	}
+	
+	public void updateName() {
+		System.out.println(getClass() + " updating name");
+	}
 }

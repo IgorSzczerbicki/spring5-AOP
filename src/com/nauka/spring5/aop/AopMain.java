@@ -16,11 +16,20 @@ public class AopMain {
 		MembershipDAO membershipDAO = context.getBean("membershipDAO", MembershipDAO.class);
 	
 		//wykonanie metod
+		//dodawanie kont
 		accountDAO.addAccount();
 		membershipDAO.addAccount();
+		
+		//kasowanie kont
 		System.out.println("\n");
 		accountDAO.deleteAccount();
 		membershipDAO.deleteAccount();
+		
+		//aktualizowanie danych
+		System.out.println("\n");
+		accountDAO.updateName();;
+		membershipDAO.updateAccount();
+		membershipDAO.updateAdrress();
 		
 		//zamkniêcie kontextu
 		context.close();
