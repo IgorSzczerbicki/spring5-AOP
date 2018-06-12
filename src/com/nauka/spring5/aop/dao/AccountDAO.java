@@ -16,4 +16,9 @@ public class AccountDAO {
 	public void updateName() {
 		System.out.println(getClass() + " updating name");
 	}
+	
+	public String updateCity() {
+		System.out.println(getClass() + " updating city");
+		return null;
+	}
 }

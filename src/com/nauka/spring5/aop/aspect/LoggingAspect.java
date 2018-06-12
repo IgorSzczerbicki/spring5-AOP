@@ -22,4 +22,9 @@ public class LoggingAspect {
 	public void beforeUpdateAdvice() {
 		System.out.println("====> Advice @Before beforeUpdateAdvice");
 	}
+	
+	@Before("execution(String *())")
+	public void beforeStringReturnAdvice() {
+		System.out.println("====> Advice @Before beforeStringReturnAdvice");
+	}
 }

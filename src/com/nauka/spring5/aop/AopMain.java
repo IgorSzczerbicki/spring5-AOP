@@ -27,7 +27,8 @@ public class AopMain {
 		
 		//aktualizowanie danych
 		System.out.println("\n");
-		accountDAO.updateName();;
+		accountDAO.updateName();
+		accountDAO.updateCity();
 		membershipDAO.updateAccount();
 		membershipDAO.updateAdrress();
 		
