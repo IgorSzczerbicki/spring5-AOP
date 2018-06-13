@@ -1,10 +1,7 @@
 package com.nauka.spring5.aop;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import com.nauka.spring5.aop.dao.AccountDAO;
 import com.nauka.spring5.aop.dao.CompanyDAO;
-import com.nauka.spring5.aop.dao.MembershipDAO;
-import com.nauka.spring5.aop.domain.Client;
 
 public class PointcutMain {
 
