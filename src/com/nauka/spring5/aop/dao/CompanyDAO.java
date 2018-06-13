@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CompanyDAO {
 
-	public void addCompany() {
+	public void addCompany(String name) {
 		System.out.println(getClass() + " adding company");
 	}
 	

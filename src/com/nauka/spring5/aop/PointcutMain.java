@@ -14,7 +14,7 @@ public class PointcutMain {
 		CompanyDAO companyDAO = context.getBean("companyDAO", CompanyDAO.class);
 
 		//wykonywanie metod
-		companyDAO.addCompany();
+		companyDAO.addCompany("Tesra");
 		companyDAO.getCompany();
 		companyDAO.setCompany();		
 		
