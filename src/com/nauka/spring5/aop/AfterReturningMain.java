@@ -11,7 +11,7 @@ public class AfterReturningMain {
 		
 		ClientDAO clientDAO = context.getBean("clientDAO", ClientDAO.class);
 		
-		clientDAO.getClient("Testowy Klient");
+		System.out.println(clientDAO.getClient("Testowy Klient"));
 		
 		context.close();
 	}
