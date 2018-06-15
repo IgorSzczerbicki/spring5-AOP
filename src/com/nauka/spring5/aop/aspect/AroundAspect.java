@@ -1,5 +1,7 @@
 package com.nauka.spring5.aop.aspect;
 
+import java.util.logging.Logger;
+
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -8,6 +10,8 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class AroundAspect {
+	
+	private static Logger log = Logger.getLogger(AroundAspect.class.getName());
 	
 	@Around("execution(String com.nauka.spring5.aop.dao.CardDAO.getCard(..))")
 	public Object getCardExecutionTime(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
@@ -20,7 +24,7 @@ public class AroundAspect {
 		long end = System.currentTimeMillis();
 		
 		long dur = end - begin;
-		System.out.println("$$$$$ @Around duration: " + dur);
+		log.info("$$$$$ @Around duration: " + dur);
 		
 		return result;
 	}
