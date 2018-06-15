@@ -12,10 +12,16 @@ public class AroundMain {
 		
 		log.info("getting config");
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AopConfig.class);
+		
 		log.info("getting bean");
 		CardDAO cardDAO = context.getBean("cardDAO", CardDAO.class);
+		
 		log.info("calling getCard");
 		cardDAO.getCard();
+		
+		log.info("calling exceptionOne");
+		cardDAO.exceptionOne();
+		
 		log.info("closing context");
 		context.close();
 	}
