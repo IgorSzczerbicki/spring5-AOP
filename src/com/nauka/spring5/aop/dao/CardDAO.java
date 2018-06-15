@@ -17,4 +17,11 @@ public class CardDAO {
 		if (rnd > 5) throw new RuntimeException("rnd: " + rnd);
 		return "excOneDone";
 	}
+	
+	public String exceptionTwo() {
+		Random rand = new Random();
+		int rnd = rand.nextInt(10);
+		if (rnd > 5) throw new RuntimeException("rnd: " + rnd);
+		return "excOTwoDone";
+	}
 }

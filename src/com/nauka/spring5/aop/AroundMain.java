@@ -22,6 +22,9 @@ public class AroundMain {
 		log.info("calling exceptionOne");
 		cardDAO.exceptionOne();
 		
+		log.info("calling exceptionTwo");
+		cardDAO.exceptionTwo();
+		
 		log.info("closing context");
 		context.close();
 	}

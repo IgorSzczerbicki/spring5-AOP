@@ -42,4 +42,18 @@ public class AroundAspect {
 			return "Exception occured";
 		}
 	}
+	
+	@Around("execution(* com.nauka.spring5.aop.dao.CardDAO.exceptionTwo(..))")
+	public Object handleExceptionTwo(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
+		
+		Object result = null;
+		
+		try {
+			result = proceedingJoinPoint.proceed();
+			return result;
+		} catch (Throwable exc) {
+			log.info("Exception: " + exc);
+			throw exc;
+		}
+	}
 }
