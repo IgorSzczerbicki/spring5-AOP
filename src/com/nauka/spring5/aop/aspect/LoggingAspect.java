@@ -28,8 +28,8 @@ public class LoggingAspect {
 		System.out.println("====> Advice @Before beforeUpdateAdvice");
 	}
 	
-	//przed dowolna metoda w dowlnej klasie zwracajaca String
-	@Before("execution(String *())")
+	//przed dowolna metoda w dowolnej klasie zwracajaca String
+	@Before("execution(String com.nauka.spring5.*.*())")
 	public void beforeStringReturnAdvice() {
 		System.out.println("====> Advice @Before beforeStringReturnAdvice");
 	}
